@@ -1,0 +1,36 @@
+drop table uczelnia.exam;
+create table uczelnia.exam (
+  exam_id INT not null auto_increment unique,  
+  student_id INT,  
+  subject_id INT,
+  question_id INT,
+  mark INT(1) UNSIGNED  not null,
+  primary key (exam_id)
+  );
+alter table uczelnia.exam 
+	add constraint student_id foreign key (student_id)
+	references uczelnia.student (student_id)
+	;
+alter table uczelnia.exam
+	add constraint subject_id foreign key (subject_id)
+	references uczelnia.subject (subject_id)
+	;
+alter table uczelnia.exam 
+	add constraint question_id foreign key (question_id)
+	references uczelnia.question (question_id)
+	;	
+insert INTO uczelnia.exam (
+  exam_id 
+ ,student_id
+ ,subject_id
+ ,question_id
+ ,mark
+  )
+values
+  (1,2,3,1,2)
+ ,(2,1,2,2,3)
+ ,(3,3,4,3,1)
+ ,(4,5,3,2,2)
+ ;
+
+  

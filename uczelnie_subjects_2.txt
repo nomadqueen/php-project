@@ -1,0 +1,20 @@
+create table uczelnia.subject (
+  subject_id INT not null auto_increment,
+  subject_name VARCHAR(20) not null,
+  subject_lecturer VARCHAR(20) not null,  
+  subject_hours INT(3) UNSIGNED not null,
+  primary key (subject_id)
+);
+insert INTo uczelnia.subject (
+  subject_id,
+  subject_name,
+  subject_lecturer,
+  subject_hours 
+)
+values
+  (1, 'Math','Adam',60),
+  (2, 'Algorithms','Marek',40),
+  (3, 'Java','Beata',38),
+  (4, 'PHP','Magda',42),
+  (5, 'Mobile apps','Roman',36)
+;

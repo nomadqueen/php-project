@@ -1,0 +1,24 @@
+create table uczelnia.question (
+  question_id INT not null auto_increment,
+  question_question VARCHAR(40) not null,
+  question_answer_1 VARCHAR(40) not null,  
+  question_answer_2 VARCHAR(40) not null,
+  question_answer_3 VARCHAR(40) not null,
+  question_answer_correct INT(1) not null,
+  primary key (question_id)
+);
+insert INTO uczelnia.question (
+  question_id,
+  question_question,
+  question_answer_1,
+  question_answer_2,
+  question_answer_3,
+  question_answer_correct 
+)
+values
+  (1, '2+2= ','1','2','4',3),
+  (2, 'Triangle is:','a number','a figure','a color',2),
+  (3, 'Java is:','programing lang','philosophy','star',1),
+  (4, '2*2= ','2','3','4',3),
+  (5, '3*5','10','12','15',3)
+;

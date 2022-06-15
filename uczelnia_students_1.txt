@@ -1,0 +1,24 @@
+drop database uczelnia;
+create database uczelnia;
+create table uczelnia.student (
+  student_id INT not null auto_increment unique,
+  student_name VARCHAR(20) not null,
+  student_surname VARCHAR(20) not null,
+  studentID INT(5) UNSIGNED not null,
+  primary key (student_id)
+);
+INSERT INTO uczelnia.student (
+    student_id
+  , student_name
+  , student_surname
+  , studentID
+)
+  VALUES
+    (1,'Jan','Kowalski',11111)
+  , (2,'Barbara','Nowak',22222)
+  , (3,'Teresa','Wolna',33333)
+  , (4,'Tomek','Tracz',44444)
+  , (5,'Olga','Smith',55555)
+  , (6,'Marek','Brown',66666)
+;
+
